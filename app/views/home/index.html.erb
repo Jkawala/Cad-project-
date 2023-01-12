@@ -1,0 +1,21 @@
+<!--The Main route of the rails server-->
+<h1> Homepage </h1>
+
+<!-- If and else statement to sign the user into the blog-->
+<% if current_user %>
+ <p> Hello <%= current_user.email %>!</p>
+ <p> You are a [<%= current_user.role %>]</p>
+
+<p>
+  You have successfully signed in
+  You can now interact with this Application<br>
+  <%= link_to "My Blog", posts_path %>
+</p>
+<%= link_to "Sign Out", destroy_user_session_path, 'data-turbo-method': :delete %>
+
+<% else %>
+ <p> You are not signed in </p>
+ <%= link_to "Sign Up!", new_user_registration_path %>
+ <br />
+ <%= link_to "Login", new_user_session_path %>
+ <% end %>
