@@ -1,12 +1,14 @@
 class Post < ApplicationRecord
   validates :name, :presence => true
  validates :title, :presence => true,
-                   :length => { :minimum => 5 }
+                   :length => { :minimum => 5, maximum: 50 }
+validates :content, :presence => true,
+          :length => { :minimum => 10, maximum: 2000 }
 
 has_many :comments, :dependent => :destroy
 has_many :tags
 
-has_rich_text :body
+
 
 
 accepts_nested_attributes_for :tags, :allow_destroy => :true,
