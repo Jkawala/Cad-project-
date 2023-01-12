@@ -135,6 +135,7 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    jk (0.0.1)
     listen (3.7.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -283,6 +284,7 @@ DEPENDENCIES
   guard-livereload (~> 2.5, >= 2.5.2)
   importmap-rails
   jbuilder
+  jk (~> 0.0.1)
   mail_form (~> 1.9)
   puma (~> 5.0)
   rails (~> 7.0.4)

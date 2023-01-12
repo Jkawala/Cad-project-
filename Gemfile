@@ -89,3 +89,6 @@ end
 gem "devise", "~> 4.8"
 
 gem "ransack", "~> 3.2"
+
+#I created this gem to handle simple forms and int values  
+gem "jk", "~> 0.0.1"

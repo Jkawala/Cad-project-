@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'admin/posts'
   get 'admin/comments'
   get 'admin/users'
-  get 'admin/show_post', to: "admin#show_post/id", as: "admin_post"
+  get 'admin/show_post/:id', to: "admin#show_post", as: "admin_post"
 end
 
 root "home#index"
