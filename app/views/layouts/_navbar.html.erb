@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <%= link_to root_path, class: "navbar-item" do %>
+       <h1 class="navbar-brand">JK Blogs</h1>
+        <% end %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+               <li class="nav-item"><%= link_to root_path, class: "dropdown-item" do %><p class="nav-link active" style="color: #000000;">Home</p> <% end %> </li>
+               <li class="nav-item"><%= link_to posts_path, class: "dropdown-item" do %><p class="nav-link active" style="color: #000000;">Feed</p> <% end %> </li>
+               <li class="nav-item"><%= link_to contact_path, class: "dropdown-item" do %><p class="nav-link active" style="color: #000000;">Contact</p> <% end %> </li>
+               <li class="nav-item"><%= link_to about_path, class: "dropdown-item" do %><p class="nav-link active" style="color: #000000;">About</p> <% end %> </li>
+
+           </ul>
+        <ul class="navbar-nav">
+          <%= render 'search/form' %>
+        <%= render "user/session_manager" %>
+        </ul>
+    </div>
+  </div>
+</nav>
