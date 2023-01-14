@@ -8,7 +8,8 @@
 User.create(email: 'JKawala@example.com',
            name: "James",
             password: 'password',
-            password_confirmation: 'password')
+            password_confirmation: 'password',
+          role: User.roles[:admin])
 
             User.create(email: 'JKa@example.com',
                        name: "Jason",
@@ -17,4 +18,10 @@ User.create(email: 'JKawala@example.com',
 
 3.times do |x|
    Post.create(title: "Title #{x}", body: "Body #{x} Filling up the blog", user_id: User.first.id)
+
+   3.times do |y|
+      Comment.create(body: "Comment #{y}",
+         user_id: User.second.id,
+       post_id: post.id)
+ end
 end
